@@ -105,8 +105,32 @@ export function Chatbot() {
   // Position the popup so it lines up under the toggle button, independent of
   // the navbar's own 3D-tilt transform (we render the popup via a portal so
   // the tilt never touches it).
+
+
+  // useEffect(() => {
+  //   function updatePosition() {
+  //     if (toggleBtnRef.current) {
+  //       const rect = toggleBtnRef.current.getBoundingClientRect();
+  //       const rightOffset = Math.max(window.innerWidth - rect.right - 8, 12);
+  //       setAnchorRight(rightOffset);
+  //     }
+  //   }
+  //   updatePosition();
+  //   window.addEventListener("resize", updatePosition);
+  //   return () => window.removeEventListener("resize", updatePosition);
+  // }, [isOpen]);
+
+
+
+
   useEffect(() => {
     function updatePosition() {
+      // On mobile (< 640px) always pin 12px from the right edge so the panel
+      // never overflows left. On desktop use the button's actual position.
+      if (window.innerWidth < 640) {
+        setAnchorRight(12);
+        return;
+      }
       if (toggleBtnRef.current) {
         const rect = toggleBtnRef.current.getBoundingClientRect();
         const rightOffset = Math.max(window.innerWidth - rect.right - 8, 12);
@@ -117,6 +141,12 @@ export function Chatbot() {
     window.addEventListener("resize", updatePosition);
     return () => window.removeEventListener("resize", updatePosition);
   }, [isOpen]);
+
+
+
+
+
+
 
   // IMPORTANT: no outside-click listener and no scroll listener here.
   // The chat panel only closes when the user manually clicks the X button
@@ -211,8 +241,13 @@ export function Chatbot() {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.95, y: -10 }}
       transition={{ duration: 0.18, ease: "easeOut" }}
+      // style={{ right: anchorRight }}
+      // className="fixed top-18 z-100 flex h-[min(32rem,75vh)] w-[min(22rem,90vw)] flex-col overflow-hidden rounded-2xl border-[0.5px] border-white/20 bg-background shadow-2xl shadow-black/30 dark:border-white/10"
+
       style={{ right: anchorRight }}
-      className="fixed top-18 z-100 flex h-[min(32rem,75vh)] w-[min(22rem,90vw)] flex-col overflow-hidden rounded-2xl border-[0.5px] border-white/20 bg-background shadow-2xl shadow-black/30 dark:border-white/10"
+      className="fixed top-18 z-100 flex h-[min(32rem,75vh)] w-[calc(100vw-24px)] flex-col overflow-hidden rounded-2xl border-[0.5px] border-white/20 bg-background shadow-2xl shadow-black/30 dark:border-white/10 sm:w-88"
+
+
     >
       {/* Header */}
       <div className="flex items-center gap-3 border-b bg-primary/5 px-4 py-3">
