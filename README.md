@@ -1,6 +1,5 @@
 # Amit Mandal — Portfolio
 
-Inspired by [achyutkatiyar.com](https://www.achyutkatiyar.com/).
 
 Built with **Next.js 15**, **Tailwind CSS v4**, **Framer Motion**, **Three.js** (star background), and **shadcn/ui** components.
 
@@ -123,15 +122,3 @@ Place your resume PDF at:
 public/resume.pdf
 ```
 
----
-
-## 🚢 Deployment
-
-**Vercel (recommended)**:
-1. Push to GitHub
-2. Import repo at [vercel.com/new](https://vercel.com/new)
-3. Zero config needed — Next.js is auto-detected
-
-**Render** (for full-stack with API):
-- Add `npm run build` as build command
-- `npm run start` as start command
