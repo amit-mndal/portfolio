@@ -123,7 +123,7 @@ function MobileMenu({
                 })}
                 <div className="mt-2 border-t border-border/30 pt-2">
                   <a
-                    href="/resume.pdf"
+                    href="/CV_Am.pdf"
                     download="Amit_Mandal_Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -68,13 +68,21 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    type: "website",
-    title: "Amit Mandal | Software Engineer",
-    description:
-      "Software Engineer specializing in Software, Full/MERN Stack development and AI-powered applications. Explore my projects, skills, and experience.",
-    siteName: "Amit Mandal",
-    locale: "en_US",
-  },
+  type: "website",
+  title: "Amit Mandal | Software Engineer",
+  description:
+    "Software Engineer specializing in Software, Full/MERN Stack development and AI-powered applications. Explore my projects, skills and experience.",
+  siteName: "Amit Mandal",
+  locale: "en_US",
+  images: [
+    {
+      url: "/og-image.png",
+      width: 1200,
+      height: 630,
+      alt: "Amit Mandal Portfolio",
+    },
+  ],
+},
 
   icons: {
     icon: [{ url: "/FinalFevicon.png" }],

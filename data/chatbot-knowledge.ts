@@ -8,7 +8,7 @@ export interface QAEntry {
 }
 
 export const FALLBACK_ANSWER =
-  "I don't know about this — please ask Amit directly by calling +91 8637814826.";
+  "I don't know about this...please ask Amit directly by calling +91 8637814826.";
 
 export const predefinedQuestions: string[] = [
   "What are your skills?",
@@ -114,4 +114,8 @@ export const qaKnowledgeBase: QAEntry[] = [
     keywords: ["thank", "thanks", "thank you"],
     answer: "You're welcome! Let me know if you have any other questions about Amit.",
   },
+  {
+  keywords: ["age", "how old", "your age", "amit age", "how old are you"],
+  answer: `Born in March 2001, So currently I'am ${new Date().getFullYear() - 2001} years old, young enough to stay curious & energetic, professional enough to take ownership and motivated to grow with the right team.`,
+},
 ];

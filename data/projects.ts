@@ -98,6 +98,36 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+  id: "portfolio-website",
+  title: "Personal Portfolio Website",
+  description:
+    "A modern developer portfolio showcasing my projects, skills, experience, and achievements with an interactive AI-powered assistant.",
+
+  longDescription:
+    "Designed and developed a fully responsive personal portfolio website to showcase my technical expertise, projects, and professional journey. Built with Next.js and Tailwind CSS, the portfolio features smooth animations, dark/light theme support, integrated contact form with EmailJS, downloadable resume, dynamic project sections, and an AI-powered assistant for interactive user engagement.",
+
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "EmailJS",
+    "Vercel",
+  ],
+
+  achievements: [
+    "Built a fully responsive portfolio with modern UI/UX and optimized performance.",
+    "Integrated AI-powered portfolio assistant for answering questions about skills, projects, and experience.",
+    "Implemented dynamic metadata, Open Graph previews, and SEO optimization for professional sharing.",
+    "Added EmailJS contact integration, resume download, and theme customization for enhanced recruiter interaction.",
+  ],
+
+  github: "https://github.com/amit-mndal/portfolio",
+  liveUrl: "https://amit-mandal.vercel.app/",
+  featured: false,
+},
+  {
     id: "fuel-route-optimizer",
     title: "Fuel Route Optimizer",
     description:
