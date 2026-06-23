@@ -101,7 +101,7 @@ export const projects: Project[] = [
   id: "portfolio-website",
   title: "Personal Portfolio Website",
   description:
-    "A modern developer portfolio showcasing my projects, skills, experience, and achievements with an interactive AI-powered assistant.",
+    "A modern developer portfolio showcasing my projects, skills, experience and achievements with an interactive AI-powered assistant.",
 
   longDescription:
     "Designed and developed a fully responsive personal portfolio website to showcase my technical expertise, projects, and professional journey. Built with Next.js and Tailwind CSS, the portfolio features smooth animations, dark/light theme support, integrated contact form with EmailJS, downloadable resume, dynamic project sections, and an AI-powered assistant for interactive user engagement.",
