@@ -46,7 +46,7 @@ export function Footer() {
               ))}
               <li>
                 <a
-                  href="/CV_Am.pdf"
+                  href="/RESUME_Am.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-primary"
